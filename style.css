@@ -1,0 +1,264 @@
+/*
+ Theme Name:     Accessible Twenty Twelve Child
+ Theme URI:      http://github.com/Arty-chan/caperbc-themes/twenty-thirteen-child/
+ Description:    Accessible version of the Twenty Twelve Theme
+ Author:         Cynthia "Arty" Ng
+ Author URI:     https://github.com/Arty-chan
+ Template:       twentytwelve
+ Description:    An accessible version of the 2012 theme for WordPress making it more accessible including keyboard accessible. List of changes available in the readme.md. Originally made for CAPER-BC.
+ Version:        1.0.0
+ License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+ License URI: http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+ Tags: accessibility-ready, light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options
+*/
+
+@import url("normalize.css");
+@import url("../twentytwelve/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+/*** General ***/
+
+/* Links */
+a {
+  text-decoration: none;
+}
+/* Change colour for higher contrast */
+.entry-content a:visited,
+a:visited {
+  color: #6E6E78;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+/* must come after visited */
+.entry-content a:hover,
+a:hover {
+  color: #0f3647;
+}
+/* Change colour for higher contrast */
+.widget-area .widget a:visited {
+  color: #767676;
+}
+/* must come after visited */
+.widget-area .widget a:hover {
+  color: #21759b;
+}
+
+/* Add assistive link focus in mobile view regardless if menu active */
+.assistive-text:focus {
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 3px;
+  clip: auto !important;
+  color: #000;
+  display: block;
+  font-size: 12px;
+  padding: 12px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 100000; /* Above WP toolbar */
+}
+
+/* Disable auto hyphenation */
+.widget-area .widget {
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  hyphens: manual;
+}
+.site-content article {
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  hyphens: manual;
+}
+
+/* add visible focus for input fields & buttons */
+input:focus,
+textarea:focus,
+select:focus {
+  border: 2px solid #8aade1;
+  -webkit-box-shadow: 0 0 3px #8aade1; /* Safari before v5 and Google Chrome */
+  -moz-box-shadow: 0 0 3px #8aade1; /* Firefox */
+  box-shadow: 0 0 3px #8aade1; /* CSS3 browsers */
+  outline: none; /* disabling Safaris default behavior*/
+}
+/* Change colour for higher contrast */
+.menu-toggle,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+article.post-password-required input[type=submit],
+.bypostauthor cite span {
+  color: #676768;
+}
+
+/*** Page ***/
+body .site {
+  margin-top: 1.429rem;
+  margin-bottom: 1.429rem;
+}
+
+/*** Header ***/
+.site-header {
+  padding: 0;
+}
+.header-image {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 1.5rem 0 0;
+  display: inline-block;
+}
+#masthead hgroup {
+  display: inline-block;
+  vertical-align: super;
+}
+/* uncomment if displaying site name
+#masthead .site-title a,
+#masthead .site-description {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}*/
+
+/* Menu - making it fully keyboard accessible */
+.main-navigation ul.nav-menu, 
+.main-navigation div.nav-menu > ul {
+/*  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute; */
+  display: inline-block;
+}
+.main-navigation ul.nav-menu a, 
+.main-navigation div.nav-menu > ul a {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute; 
+}
+#masthead .site-title a:focus,
+.main-navigation ul.nav-menu a:focus,
+.main-navigation div.nav-menu > ul a:focus {
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 3px;
+  clip: auto !important;
+  color: #000;
+  display: block;
+  font-size: 12px;
+  padding: 12px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 100000; /* Above WP toolbar */
+}
+.main-navigation ul.nav-menu.toggled-on a {
+  display: inline;
+  clip: auto;
+  position: static;
+}
+.main-navigation ul.nav-menu.toggled-on a:focus,
+.main-navigation div.nav-menu > ul.toggled-on a:focus {
+  background: inherit;
+  border: 0;
+  border-radius: 0;
+  color: #21759B;
+  display: inline;
+  font-size: inherit;
+  padding: inherit;
+  position: static;
+  z-index: auto;
+}
+.main-navigation li ul {
+  display: none;
+}
+
+/*** Content ***/
+/* decrease space between menu and content */
+.site-content {
+  margin-top: 0.714rem;
+}
+/* remove border & massive margin if it's a page */
+.site-content .type-page {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/*** Sidebar ***/
+/* decrease space below menu, should match .site-content */
+.widget-area {
+  margin-top: 0.714rem;
+}
+/* smaller bottom margin */
+.widget-area .widget h3 {
+  margin-bottom: 1rem;
+}
+/* increase font size and decrease line height */
+.widget-title {
+  font-size: 0.886rem;
+}
+
+/*** Footer ***/
+footer[role="contentinfo"] {
+  text-align: center;
+  margin-top: 0.714rem;
+}
+
+/*** Minimum width of 600 pixels. ***/
+@media screen and (min-width: 600px) {
+
+  /*** Header ***/
+  .site-header {
+    padding: 1.71429rem 0;
+  }
+  .header-image {
+    max-width: 35% !important;
+  }
+  /* uncomment if displaying site name
+  #masthead .site-title a,
+  #masthead .site-description {
+    clip: auto;
+    position: static;
+  }*/
+  #masthead hgroup {
+    max-width: 60%;
+  }
+  .site-title {
+    margin: 0;
+  }
+
+  /* Menu */
+  /* show menu and keep look consistent on focus */
+  .main-navigation ul.nav-menu a,
+  .main-navigation div.nav-menu > ul a {
+    clip: auto;
+    position: static;
+  }
+  #masthead .site-title a:focus,
+  .main-navigation ul.nav-menu a:focus,
+  .main-navigation div.nav-menu > ul a:focus {
+    background: inherit;
+    border: 0;
+    border-radius: 0;
+    color: #21759B;
+    display: inline;
+    font-size: inherit;
+    padding: inherit;
+    position: static;
+    z-index: auto;
+  }
+  .main-navigation ul.children li a:focus {
+      background: #e3e3e3;
+      color: #444;
+      border-bottom: 1px solid #ededed;
+      display: block;
+      font-size: 11px;
+      font-size: 0.785714286rem;
+      line-height: 2.181818182;
+      padding: 8px 10px;
+      padding: 0.571428571rem 0.714285714rem;
+      width: 180px;
+      width: 12.85714286rem;
+      white-space: normal;
+  }
+  .menu-toggle {
+    display: none;
+  }
+}
