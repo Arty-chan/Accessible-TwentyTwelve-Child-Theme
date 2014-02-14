@@ -18,10 +18,6 @@ Accessiblility
 * Override auto-hyphenation to disable
 * Added skip to menu link at top of page
 
-Possible Future Changes
-* media queries changed from px to em
-To make this properly responsive, I'd like to change it the media queries from px to em, but practically, that would need to be done in TwentyTwelve first.
-
 ## Want to help?
 Please simply contact me! I would love some help working out any issues.
 
