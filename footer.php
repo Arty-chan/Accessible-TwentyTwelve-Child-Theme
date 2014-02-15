@@ -15,7 +15,7 @@
 		<div class="site-info">
 			<?php $childthemeoptions = get_option('childoptions');
 			if ($childthemeoptions['footerinfo'] === "") { ?>
-				<a href="<?php echo esc_url( __( 'http:///wordpress.org/', 'twentytwelve' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a> &copy; <?php echo date('Y'); ?>
+				<a href="<?php echo esc_url( __( 'http:///wordpress.org/', 'twentytwelve' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>
 			<?php } else {
 				echo $childthemeoptions['footerinfo'];
 			} ?>
