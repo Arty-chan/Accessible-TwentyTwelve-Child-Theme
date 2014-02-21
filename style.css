@@ -20,17 +20,10 @@
 /*** General ***/
 
 /* Links */
-a {
-  text-decoration: none;
-}
 /* Change colour for higher contrast */
 .entry-content a:visited,
 a:visited {
   color: #6E6E78;
-}
-a:hover,
-a:active {
-  text-decoration: underline;
 }
 /* must come after visited */
 .entry-content a:hover,
