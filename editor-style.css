@@ -6,3 +6,6 @@ Description: Used to override Twenty Twelve Theme styles for the TinyMCE editor.
 html .mceContentBody {
 	max-width: 100%;
 }
+ul ul, ol ol, ul ol, ol ul {
+	padding-left: 1em;
+}
