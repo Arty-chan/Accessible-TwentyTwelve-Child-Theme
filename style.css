@@ -200,7 +200,8 @@ footer[role="contentinfo"] {
     padding: 1.71429rem 0;
   }
   .header-image {
-    max-width: 35% !important;
+    max-height: 250px;
+    width: auto;
   }
   /* uncomment if displaying site name
   #masthead .site-title a,
@@ -208,9 +209,6 @@ footer[role="contentinfo"] {
     clip: auto;
     position: static;
   }*/
-  #masthead hgroup {
-    max-width: 60%;
-  }
   .site-title {
     margin: 0;
   }
