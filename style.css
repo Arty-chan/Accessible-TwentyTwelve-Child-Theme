@@ -96,6 +96,12 @@ body .site {
 .site-header {
   padding: 0;
 }
+/* reset */
+#masthead .site-title,
+#masthead .site-description {
+  clip: auto;
+  position: static;
+}
 .header-image {
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -106,18 +112,18 @@ body .site {
   display: inline-block;
   vertical-align: super;
 }
-/* uncomment if displaying site name
-#masthead .site-title a,
-#masthead .site-description {
+#masthead .displaying-header-text .site-title a:focus {
+    color: #21759B;
+}
+#masthead .displaying-header-image .site-title a,
+#masthead .displaying-header-image .site-description {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
-}*/
+}
 
 /* Menu - making it fully keyboard accessible */
 .main-navigation ul.nav-menu, 
 .main-navigation div.nav-menu > ul {
-/*  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute; */
   display: inline-block;
 }
 .main-navigation ul.nav-menu a, 
@@ -125,7 +131,7 @@ body .site {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute; 
 }
-#masthead .site-title a:focus,
+#masthead .displaying-header-image .site-title a:focus,
 .main-navigation ul.nav-menu a:focus,
 .main-navigation div.nav-menu > ul a:focus {
   background: #fff;
@@ -203,12 +209,11 @@ footer[role="contentinfo"] {
     max-height: 250px;
     width: auto;
   }
-  /* uncomment if displaying site name
-  #masthead .site-title a,
-  #masthead .site-description {
+  #masthead .displaying-header-text .site-title a,
+  #masthead .displaying-header-text .site-description {
     clip: auto;
     position: static;
-  }*/
+  }
   .site-title {
     margin: 0;
   }
@@ -220,7 +225,7 @@ footer[role="contentinfo"] {
     clip: auto;
     position: static;
   }
-  #masthead .site-title a:focus,
+  #masthead .displaying-header-text .site-title a:focus,
   .main-navigation ul.nav-menu a:focus,
   .main-navigation div.nav-menu > ul a:focus {
     background: inherit;

@@ -37,10 +37,18 @@
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 	<a class="assistive-text" href="#site-navigation" title="<?php esc_attr_e( 'Skip to menu', 'twentytwelve' ); ?>"><?php _e( 'Skip to menu', 'twentytwelve' ); ?></a>
-    <?php if ( get_header_image() ) : ?>
+    <?php $got_header_image = get_header_image(); if ( $got_header_image ) : ?>
     <a id="logo-link" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
     <?php endif; ?>
-		<hgroup>
+		<hgroup<?php
+			$got_header_text = display_header_text();
+			$classes = array();
+			if ( $got_header_text ) { $classes[] = "displaying-header-text"; }
+			if ( $got_header_image ) { $classes[] = "displaying-header-image"; }
+			if (count($classes) > 0) {
+				print ' class="' . implode(" ",$classes) . '"';
+			}
+		?>>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
