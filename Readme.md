@@ -2,8 +2,10 @@
 This is a fully accessible version of the twentytwelve WordPress theme. At least, that's the goal, so please report any issues.
 
 ## Requirements
-* TwentyTwelve Theme
+* TwentyTwelve Theme (version 1.3)
 * WordPress 3.5 or higher recommended (the version TwentyTwelve was released with)
+
+Whenever the parent theme is updated, an issue will be filed to check compatibility. If the theme has been updated and I somehow missed that, please feel free to poke me or file the issue.
 
 ## Changes from the Original TwentyTwelve
 Layout
