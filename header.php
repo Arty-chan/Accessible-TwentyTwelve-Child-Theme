@@ -61,4 +61,4 @@
 
 	</header><!-- #masthead -->
 
-	<div id="main" class="wrapper" role="main">
+	<div id="main" class="wrapper">
