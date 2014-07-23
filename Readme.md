@@ -24,7 +24,7 @@ Accessiblility
 Please simply contact me! I would love some help working out any issues.
 
 ## License Information
-[CC BY-NC-SA 4.0 license](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+[GPL v3](https://www.gnu.org/licenses/gpl.html)
 
 ## Purpose and Rationale
 While newer default themes are likely more accessible than the TwentyTwelve theme, those themes have a specific look and purpose in mind (e.g. for a blog, image heavy site like a portfolio). Twentytwelve is a great simple-looking theme for a website and having worked with it before, I knew that it met many accessible requirements already.
