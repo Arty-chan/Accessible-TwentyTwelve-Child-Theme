@@ -33,7 +33,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 	<a class="assistive-text" href="#site-navigation" title="<?php esc_attr_e( 'Skip to menu', 'twentytwelve' ); ?>"><?php _e( 'Skip to menu', 'twentytwelve' ); ?></a>
@@ -54,7 +53,7 @@
 		</hgroup>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
+			<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav><!-- #site-navigation -->

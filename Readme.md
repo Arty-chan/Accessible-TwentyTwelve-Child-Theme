@@ -5,7 +5,7 @@ This is a fully accessible version of the twentytwelve WordPress theme. At least
 * TwentyTwelve Theme (version 1.4)
 * WordPress 3.5 or higher recommended (the version TwentyTwelve was originally released with)
 
-If the parent theme has been updated and I somehow missed that, please file an issue.
+If the parent theme has been updated and it's causing problems, please let me know.
 
 ## Changes from the Original TwentyTwelve
 Layout
@@ -17,11 +17,10 @@ Accessiblility
 * Changed some of the text and link colours to meet contrast guideline
 * Added link text box in top right corner on focus of hidden links
 * Added visible focus for input boxes
-* Override auto-hyphenation to disable
+* Override auto-hyphenation to disable it
 * Added skip to menu link at top of page
 
-## Want to help?
-Please simply contact me! I would love some help working out any issues.
+Note: With the release of WordPress 4.0, the problem with menu links not working when in "mobile" mode has been fixed in the parent theme.
 
 ## License Information
 [GPL v3](https://www.gnu.org/licenses/gpl.html)

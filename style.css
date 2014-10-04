@@ -8,7 +8,7 @@
  Description:    An accessible version of the 2012 theme for WordPress making it more accessible including keyboard accessible. List of changes available in the readme.md. Originally made for CAPER-BC.
  License: GNU General Public License version 3 (GPL v3)
  License URI: https://www.gnu.org/licenses/gpl.html
- Tags: accessibility-ready, light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options
+ Tags: accessibility-ready, light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options
 */
 
 @import url("normalize.css");
@@ -38,8 +38,8 @@ a:hover {
   color: #21759b;
 }
 
-/* Add assistive link focus in mobile view regardless if menu active */
-.assistive-text:focus {
+/* Add assistive link focus for anything in header i.e. skip to menu link */
+#masthead .assistive-text:focus {
   background: #fff;
   border: 2px solid #333;
   border-radius: 3px;
@@ -96,76 +96,23 @@ body .site {
 .site-header {
   padding: 0;
 }
-/* reset */
-#masthead .site-title,
-#masthead .site-description {
-  clip: auto;
-  position: static;
+#logo-link {
+  display: inline-block;
+  vertical-align: middle;
 }
 .header-image {
   border-radius: 0 !important;
   box-shadow: none !important;
   margin: 0 1.5rem 0 0;
-  display: inline-block;
+  max-height: 250px;
+  width: auto;
 }
 #masthead hgroup {
-  display: inline-block;
-  vertical-align: super;
-}
-#masthead .displaying-header-text .site-title a:focus {
-    color: #21759B;
-}
-#masthead .displaying-header-image .site-title a,
-#masthead .displaying-header-image .site-description {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute;
-}
-
-/* Menu - making it fully keyboard accessible */
-.main-navigation ul.nav-menu, 
-.main-navigation div.nav-menu > ul {
-  display: inline-block;
-}
-.main-navigation ul.nav-menu a, 
-.main-navigation div.nav-menu > ul a {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute; 
-}
-#masthead .displaying-header-image .site-title a:focus,
-.main-navigation ul.nav-menu a:focus,
-.main-navigation div.nav-menu > ul a:focus {
-  background: #fff;
-  border: 2px solid #333;
-  border-radius: 3px;
-  clip: auto !important;
-  color: #000;
-  display: block;
-  font-size: 12px;
-  padding: 12px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 100000; /* Above WP toolbar */
-}
-.main-navigation ul.nav-menu.toggled-on a {
-  display: inline;
-  clip: auto;
-  position: static;
-}
-.main-navigation ul.nav-menu.toggled-on a:focus,
-.main-navigation div.nav-menu > ul.toggled-on a:focus {
-  background: inherit;
-  border: 0;
-  border-radius: 0;
-  color: #21759B;
-  display: inline;
-  font-size: inherit;
-  padding: inherit;
-  position: static;
-  z-index: auto;
-}
-.main-navigation li ul {
   display: none;
+}
+#masthead hgroup.displaying-header-text {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /*** Content ***/
@@ -205,75 +152,8 @@ footer[role="contentinfo"] {
   .site-header {
     padding: 1.71429rem 0;
   }
-  .header-image {
-    max-height: 250px;
-    width: auto;
-  }
-  #masthead .displaying-header-text .site-title a,
-  #masthead .displaying-header-text .site-description {
-    clip: auto;
-    position: static;
-  }
   .site-title {
     margin: 0;
   }
 
-  /* Menu */
-  /* this basically undoes all the mobile menu changes */
-  .main-navigation ul.nav-menu a,
-  .main-navigation div.nav-menu > ul a {
-    clip: auto;
-    position: static;
-  }
-  #masthead .displaying-header-text .site-title a:focus {
-    color: #21759B;
-  }
-  #masthead .displaying-header-text .site-title a:focus,
-  .main-navigation ul.nav-menu a:focus,
-  .main-navigation div.nav-menu > ul a:focus {
-    background: inherit;
-    border: 0;
-    border-radius: 0;
-    display: inline;
-    font-size: inherit;
-    padding: inherit;
-    position: static;
-    z-index: auto;
-  }
-  .main-navigation ul.children li a:focus {
-    background: #e3e3e3;
-    color: #444;
-    border-bottom: 1px solid #ededed;
-    display: block;
-    font-size: 11px;
-    font-size: 0.785714286rem;
-    line-height: 2.181818182;
-    padding: 8px 10px;
-    padding: 0.571428571rem 0.714285714rem;
-    width: 180px;
-    width: 12.85714286rem;
-    white-space: normal;
-  }
-  .main-navigation li ul {
-    display: block;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 100%;
-    z-index: 1;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-  }
-  /* styles copied from main style.css to keep look consistent*/
-  .main-navigation li a:hover,
-  .main-navigation li a:focus {
-    color: #000;
-  }
-  .main-navigation li ul li a:hover,
-  .main-navigation li ul li a:focus {
-    background: #e3e3e3;
-    color: #444;
-  }
 }
