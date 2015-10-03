@@ -2,7 +2,7 @@
 This is a fully accessible version of the twentytwelve WordPress theme. At least, that's the goal, so please report any issues. Nevertheless, as the parent theme is improved, hopefully this child theme will no longer be needed.
 
 ## Requirements
-* TwentyTwelve Theme (version 1.4)
+* TwentyTwelve Theme (version 1.5)
 * WordPress 3.5 or higher recommended (the version TwentyTwelve was originally released with)
 
 If the parent theme has been updated and it's causing problems, please let me know.

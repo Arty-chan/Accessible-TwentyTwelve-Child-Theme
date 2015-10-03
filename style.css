@@ -13,6 +13,7 @@
 
 @import url("normalize.css");
 @import url("../twentytwelve/style.css");
+@import url("header-layout.css"); /* remove this line if you delete the header.php from this child theme */
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
@@ -38,8 +39,10 @@ a:hover {
   color: #21759b;
 }
 
-/* Add assistive link focus for anything in header i.e. skip to menu link */
+/* Add assistive link focus for skip to menu link */
 #masthead .assistive-text:focus {
+  height: auto;
+  width: auto;
   background: #fff;
   border: 2px solid #333;
   border-radius: 3px;
@@ -92,29 +95,6 @@ body .site {
   margin-bottom: 1.429rem;
 }
 
-/*** Header ***/
-.site-header {
-  padding: 0;
-}
-#logo-link {
-  display: inline-block;
-  vertical-align: middle;
-}
-.header-image {
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  margin: 0 1.5rem 0 0;
-  max-height: 250px;
-  width: auto;
-}
-#masthead hgroup {
-  display: none;
-}
-#masthead hgroup.displaying-header-text {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 /*** Content ***/
 /* decrease space between menu and content */
 .site-content {
@@ -143,17 +123,4 @@ body .site {
 /*** Footer ***/
 footer[role="contentinfo"] {
   margin-top: 0.714rem;
-}
-
-/*** Minimum width of 600 pixels. ***/
-@media screen and (min-width: 600px) {
-
-  /*** Header ***/
-  .site-header {
-    padding: 1.71429rem 0;
-  }
-  .site-title {
-    margin: 0;
-  }
-
 }

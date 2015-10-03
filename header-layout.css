@@ -1,0 +1,25 @@
+/* =Theme customization for custom header
+-------------------------------------------------------------- */
+/*** Header ***/
+.header-image {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 1.5rem 0 0;
+  max-height: 250px;
+  width: auto;
+}
+
+/*** Minimum width of 600 pixels. ***/
+@media screen and (min-width: 600px) {
+  /* vertically align header blocks */
+  #masthead a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #masthead hgroup {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+}
